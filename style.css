@@ -1,0 +1,79 @@
+/* styles.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1b5e20, #4caf50); /* Fundo degradê */
+    color: white;
+    text-align: center;
+}
+
+/* Cabeçalho */
+header {
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Seções */
+section {
+    margin: 40px 20px;
+}
+
+.cards, .skills {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Cards e Skills */
+.card, .skill {
+    background: #263238;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-transform: uppercase;
+    width: 250px;  /* Adicionando um tamanho fixo para os cards */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efeito de zoom mais suave */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* Aumento da sombra */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .card, .skill {
+        width: 200px; /* Ajustando o tamanho do card em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .card, .skill {
+        width: 180px; /* Ajustando ainda mais em telas muito pequenas */
+    }
+}
